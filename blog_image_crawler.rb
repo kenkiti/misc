@@ -34,6 +34,7 @@ class BlogImageDownloader
   end
 
   def download(uri, to_next)
+    to_next ||= "次へ"
     page = @agent.get(uri)
     while page
       page.root.search("html body a").each do |a|
@@ -62,7 +63,7 @@ if $0 == __FILE__
   parser = OptionParser.new
   opt = {}
   parser.banner = "Usage: #{File.basename($0)} options"
-  parser.on('-u URL', '--url URL', "Specify the URL of ameba-blog to download image.") {|u| opt[:url] = u }
+  parser.on('-u URL', '--url URL', "Specify the URL of blog to download image.") {|u| opt[:url] = u }
   parser.on('-p PATH','--path PATH', "Directory path name to save image.") {|p| opt[:path] = p }
   parser.on('-t TEXT','--text TEXT', "Text of next-page anchor.") {|t| opt[:text] = t }
   parser.on('-h', '--help', 'Prints this message and quit.') {
