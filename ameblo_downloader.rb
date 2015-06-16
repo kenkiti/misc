@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 # Author: kenkiti (INOUE Tadashi)
-# $Id: ameblo_downloader.rb 87 2008-12-24 14:21:50Z rocky $
+# $Id$
 require 'kconv'
 require 'uri'
 require 'logger'
@@ -80,7 +80,7 @@ if $0 == __FILE__
   parser.banner = "Usage: #{File.basename($0)} options"
   parser.on('-u URL', '--url URL', "Specify the URL of ameba-blog to download image.") {|u| opt[:url] = u }
   parser.on('-p PATH','--path PATH', "Directory path name to save image.") {|p| opt[:path] = p }
-  parser.on('-h', '--help', 'Prints this message and quit.') {
+  parser.on('-h', '--help', 'Prints this message and quit') {
     puts parser.help
     exit 0;
   }

@@ -1,9 +1,4 @@
 #-*- coding: euc-jp -*-
-# Created: April 19,2007 Thursday 12:18:42
-# Author: kenkiti (INOUE Tadashi)
-# $Id: megurulove.com.rb 18 2008-02-11 03:23:14Z rocky $
-# usage: ruby megurulove.com.rb
-
 $KCODE='u'
 require 'rubygems'
 require 'mechanize'
